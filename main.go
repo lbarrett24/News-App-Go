@@ -147,9 +147,9 @@ func searchHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	go track.Track(
-	    track.WithConfigTag("service", {APM-SERVICE-NAME}),
-	    track.WithConfigTag("projectName", {APM-PROJECT-NAME}),
-	    track.WithConfigTag("accessToken", "{ACCOUNT_KEY}"),
+	    track.WithConfigTag("service", "e0916c9e963a"),
+	    track.WithConfigTag("projectName", "Luke_Barrett_test_proj"),
+	    track.WithConfigTag("accessToken", "xikfeedzcpoynjtapgmbywcypsdbrkviwzwo"),
 	)
 	
 	// apiKey = flag.String("apikey", "", "Newsapi.org access key")
