@@ -1,6 +1,7 @@
 package main
 
 import (
+	track "github.com/middleware-labs/golang-apm/tracker"
 	"encoding/json"
 	"fmt"
 	"html/template"
@@ -145,6 +146,12 @@ func searchHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
+	go track.Track(
+	    track.WithConfigTag("service", "apm-demo-2"),
+	    track.WithConfigTag("projectName", "Luke_Barrett_test_proj"),
+	    track.WithConfigTag("accessToken", "xikfeedzcpoynjtapgmbywcypsdbrkviwzwo"),
+	)
+	
 	// apiKey = flag.String("apikey", "", "Newsapi.org access key")
 	// flag.Parse()
 	err := godotenv.Load()
