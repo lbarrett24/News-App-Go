@@ -147,7 +147,7 @@ func searchHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	go track.Track(
-	    track.WithConfigTag("service", "e0916c9e963a"),
+	    track.WithConfigTag("service", "apm-demo-2"),
 	    track.WithConfigTag("projectName", "Luke_Barrett_test_proj"),
 	    track.WithConfigTag("accessToken", "xikfeedzcpoynjtapgmbywcypsdbrkviwzwo"),
 	)
